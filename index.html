@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muzamil Qamar | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Muzamil Qamar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (No Profile Image) -->
+  <header class="position-relative text-center text-light py-5 overflow-hidden" style="margin-top: 56px;">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" id="bg-video">
+      <source src="muzamil.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75"></div>
+
+    <!-- Hero content -->
+    <div class="position-relative py-5 fade-in">
+      <h1 class="fw-bold mt-5 display-4">Muhammad Muzamil Qamar</h1>
+      <p class="text-secondary fs-5">Web Developer • UI Designer • Programmer</p>
+      <a href="projects.html" class="btn btn-info text-dark fw-semibold mt-3 px-4 py-2">View My Work</a>
+
+      <!-- Background audio + mute toggle -->
+      <div class="mt-4">
+        <audio id="bg-music" autoplay loop>
+          <source src="muzamil.mp3" type="audio/mpeg">
+        </audio>
+        <button class="btn btn-outline-info btn-sm" type="button" id="music-toggle">
+          🔊 Mute / Unmute
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="py-5 bg-dark text-center">
+    <div class="container">
+      <h2 class="text-info mb-4">About Me</h2>
+      <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+        I'm a passionate web developer who loves creating clean, responsive, and user-friendly websites. 
+        I work with HTML, Bootstrap, JavaScript, Python, and MySQL. Apart from coding, I enjoy UI designing, 
+        hiking, photography, and exploring new technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-3">
+    <small class="text-secondary">&copy; 2025 Muhammad Muzamil Qamar. All rights reserved.</small>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Simple mute toggle -->
+  <script>
+    const music = document.getElementById('bg-music');
+    const toggle = document.getElementById('music-toggle');
+    toggle.addEventListener('click', () => {
+      music.muted = !music.muted;
+      toggle.innerHTML = music.muted ? '🔇 Unmute' : '🔊 Mute / Unmute';
+    });
+  </script>
+</body>
+</html>
